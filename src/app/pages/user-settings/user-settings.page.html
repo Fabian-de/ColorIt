@@ -1,0 +1,39 @@
+<ion-header class="ion-padding ion-no-border">
+  <img class="center" src="assets/images/logo.png">
+</ion-header>
+
+<ion-content class="ion-padding">
+  <span *ngIf="user">
+    <div class="ion-text-center fullheight xc">
+      <ion-icon class="trash-icon" (click)="deleteUser()" name="trash-sharp"></ion-icon>
+    </div>
+  </span>
+</ion-content>
+
+<ion-footer *ngIf="user" class="ion-no-border">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="">
+        <div>
+          <a routerLink="/user-details">
+            <ion-icon name="color-palette-sharp" class="ion-3x"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col class="middle">
+        <div>
+          <a routerLink="/users">
+            <ion-icon name="people-sharp" class="ion-3x"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col class="">
+        <div>
+          <a routerLink="/user-settings">
+            <ion-icon name="settings-sharp" class="ion-3x"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

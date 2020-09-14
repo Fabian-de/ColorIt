@@ -1,0 +1,51 @@
+ion-header {
+    text-align: center;
+}
+
+ion-header img {
+    padding-top: 3em;
+}
+
+.fullheight {
+  height: 70%;
+}
+  
+.xc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-icon {
+  font-size: 64px;
+}
+
+.trash-icon {
+  position: relative;
+  font-size: 8em;
+  text-align: center;
+}
+
+.ion-3x {
+  position: relative;
+  font-size: 3em;
+  text-align: center;
+}
+  
+ion-footer div {
+  background-color: #fff;
+  text-align: center;
+}
+
+ion-footer ion-row {
+  border: 4px solid #000;
+}
+
+ion-footer a {
+  color: #000;
+}
+
+ion-footer ion-col.middle {
+  border-left: 4px solid #000;
+  border-right: 4px solid #000;
+}

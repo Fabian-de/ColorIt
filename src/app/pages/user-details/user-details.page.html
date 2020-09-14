@@ -1,0 +1,48 @@
+<ion-header *ngIf="!user" class="ion-padding ion-no-border">
+  <img class="center" src="assets/images/logo.png">
+</ion-header>
+
+<ion-content class="">
+  <span *ngIf="!user">
+    <div class="ion-text-center fullheight xc">
+      <button ion-button outline class="signup-button ion-padding" (click)="createUser()">Aanmelden</button>
+    </div>
+  </span>
+
+  <span *ngIf="user && user.colors?.length > 0">
+    <div class="flex-container">
+      <div *ngFor="let userColor of user.colors; first as isFirst" class="user-color-background"
+        [style.backgroundColor]="userColor.color">
+        <img *ngIf="isFirst" class="center ion-padding " src="assets/images/logo.png">
+      </div>
+    </div>
+  </span>
+</ion-content>
+
+<ion-footer *ngIf="user" class="ion-no-border">
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col class="">
+        <div>
+          <a routerLink="/user-details">
+            <ion-icon name="color-palette-sharp" class="ion-3x"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col class="middle">
+        <div>
+          <a routerLink="/users">
+            <ion-icon name="people-sharp" class="ion-3x"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+      <ion-col class="">
+        <div>
+          <a routerLink="/user-settings">
+            <ion-icon name="settings-sharp" class="ion-3x"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>
